@@ -16,7 +16,7 @@ function contarTiempo(){
   tiempoRegresivo = setInterval(() => {
     mostrarTiempo.innerHTML = `Tiempo restante: ${timer} segundos`;
     timer--;
-    if(timer < 0){
+  if(timer < 0){
       clearInterval(tiempoRegresivo);
       bloquearTarjetas(numeros);
     }
@@ -25,7 +25,7 @@ function contarTiempo(){
 
 function bloquearTarjetas(numeros){
   for(let i = 0; i<=15; i++){
-    let tarjetaBloqueada = document.getElementById(i);
+  let tarjetaBloqueada = document.getElementById(i);
     tarjetaBloqueada.innerHTML = numeros[i];
     tarjetaBloqueada.disabled = true;
   }
@@ -40,7 +40,7 @@ function girar(id){
   
   if (cartasDestapadas == 0){
     //Mostrar número
-    let card1 = document.getElementById(id);   
+  let card1 = document.getElementById(id);   
     primeraEleccion = numeros[id]; 
     card1.innerHTML = primeraEleccion;
     //Deshabilitar botón
@@ -90,7 +90,8 @@ function girar(id){
   if (pares == 8){
     clearInterval(tiempoRegresivo);
     mostrarTiempo.innerHTML = `¡Excelente! 🔥 demoraste ${timerInicial - timer - 1} segundos`;
-    mostrarPuntaje.innerHTML = `Puntaje: ${puntaje} `;
-    mostrarMovimientos.innerHTML = `Movimientos: ${movimientos} `;
+    mostrarPuntaje.innerHTML = `Puntaje:
+     ${puntaje} `;
+    mostrarMovimientos.innerHTML = `Tus Movimientos: ${movimientos} `;
   }
 }
